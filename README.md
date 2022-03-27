@@ -1,3 +1,13 @@
+# Personal fork of TWINT
+
+Solves some issues of TWINT on "fixes" branch that are not in the main repo, includes:
+
+- Pinning version of aiohttp to 3.7.0
+- config.Lookup errors when certain user properties did not exist
+- config.Limit not working at all
+
+Check [Installing](#installing) for installation details
+
 # TWINT - Twitter Intelligence Tool
 ![2](https://i.imgur.com/iaH3s7z.png)
 ![3](https://i.imgur.com/hVeCrqL.png)
@@ -42,25 +52,16 @@ Twitter limits scrolls while browsing the user timeline. This means that with `.
 
 **Git:**
 ```bash
-git clone --depth=1 https://github.com/twintproject/twint.git
-cd twint
+git clone --depth=1 https://github.com/victguo/twint.git twint-fork
+cd twint-fork
+git checkout fixes
 pip3 install . -r requirements.txt
-```
-
-**Pip:**
-```bash
-pip3 install twint
 ```
 
 or
 
 ```bash
-pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
-```
-
-**Pipenv**:
-```bash
-pipenv install git+https://github.com/twintproject/twint.git#egg=twint
+pip3 install --user --upgrade git+https://github.com/victguo/twint.git@origin/fixes#egg=twint
 ```
 
 ### March 2, 2021 Update
